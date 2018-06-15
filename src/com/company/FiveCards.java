@@ -2,15 +2,16 @@ package com.company;
 
 import java.util.Arrays;
 
-public class FiveCard {
+public class FiveCards {
     private RankOfCard rankOfCard;
     private Card highRank;
     private static Card[] cards = new Card[5];
-    public FiveCard(Card[] cards) {
+    public FiveCards(Card[] cards) {
         this.cards = cards;
         Arrays.sort(cards);
-        highRank = cards[4];
+        rankOfCard = determineRankOfCard();
     }
+
 
     public RankOfCard determineRankOfCard(){
         if(determineIfItIsStraightFlush()) {
@@ -82,6 +83,7 @@ public class FiveCard {
         return determineIfItIsFlush() && determineIfItIsStraight();
     }
 
+    
     @Override
     public String toString() {
         String retString = "";

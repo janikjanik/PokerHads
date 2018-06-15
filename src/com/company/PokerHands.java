@@ -1,7 +1,5 @@
 package com.company;
 
-import java.util.ArrayList;
-
 public class PokerHands {
 
     public static void main(String[] args) {
@@ -11,6 +9,6 @@ public class PokerHands {
         Card card4 = new Card(Rank.KING, Suit.SPADES);
         Card card5 = new Card(Rank.FOUR, Suit.CLUBS);
 
-        FiveCard fiveCard = new FiveCard(new Card[]{card,card2,card3,card4,card5});
+        FiveCards fiveCards = new FiveCards(new Card[]{card,card2,card3,card4,card5});
     }
 }

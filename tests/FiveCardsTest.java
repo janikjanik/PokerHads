@@ -1,13 +1,11 @@
 import com.company.Card;
-import com.company.FiveCard;
+import com.company.FiveCards;
 import com.company.Rank;
 import com.company.Suit;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
-public class FiveCardTest {
+public class FiveCardsTest {
 
     @Test
     public void determineIfItIsAPairShouldReturnFalse() throws Exception {
@@ -16,8 +14,8 @@ public class FiveCardTest {
         Card card3 = new Card(Rank.TWO, Suit.CLUBS);
         Card card4 = new Card(Rank.KING, Suit.SPADES);
         Card card5 = new Card(Rank.FOUR, Suit.CLUBS);
-        FiveCard fiveCard = new FiveCard(new Card[]{card,card2,card3,card4,card5});
-        Assert.assertEquals(false, fiveCard.determineIfItIsAPair());
+        FiveCards fiveCards = new FiveCards(new Card[]{card,card2,card3,card4,card5});
+        Assert.assertEquals(false, fiveCards.determineIfItIsAPair());
     }
 
     @Test
@@ -27,8 +25,8 @@ public class FiveCardTest {
         Card card3 = new Card(Rank.FIVE, Suit.DIAMONDS);
         Card card4 = new Card(Rank.KING, Suit.SPADES);
         Card card5 = new Card(Rank.FOUR, Suit.CLUBS);
-        FiveCard fiveCard = new FiveCard(new Card[]{card,card2,card3,card4,card5});
-        Assert.assertEquals(true, fiveCard.determineIfItIsAPair());
+        FiveCards fiveCards = new FiveCards(new Card[]{card,card2,card3,card4,card5});
+        Assert.assertEquals(true, fiveCards.determineIfItIsAPair());
     }
 
     @Test
@@ -38,8 +36,8 @@ public class FiveCardTest {
         Card card3 = new Card(Rank.FIVE, Suit.DIAMONDS);
         Card card4 = new Card(Rank.KING, Suit.SPADES);
         Card card5 = new Card(Rank.FOUR, Suit.CLUBS);
-        FiveCard fiveCard = new FiveCard(new Card[]{card,card2,card3,card4,card5});
-        Assert.assertEquals(false, fiveCard.determineIfItIsTwoPair());
+        FiveCards fiveCards = new FiveCards(new Card[]{card,card2,card3,card4,card5});
+        Assert.assertEquals(false, fiveCards.determineIfItIsTwoPair());
     }
 
     @Test
@@ -49,8 +47,8 @@ public class FiveCardTest {
         Card card4 = new Card(Rank.KING, Suit.SPADES);
         Card card3 = new Card(Rank.FIVE, Suit.DIAMONDS);
         Card card5 = new Card(Rank.FOUR, Suit.CLUBS);
-        FiveCard fiveCard = new FiveCard(new Card[]{card,card2,card3,card4,card5});
-        Assert.assertEquals(true, fiveCard.determineIfItIsTwoPair());
+        FiveCards fiveCards = new FiveCards(new Card[]{card,card2,card3,card4,card5});
+        Assert.assertEquals(true, fiveCards.determineIfItIsTwoPair());
     }
 
     @Test
@@ -60,8 +58,8 @@ public class FiveCardTest {
         Card card3 = new Card(Rank.TWO, Suit.CLUBS);
         Card card4 = new Card(Rank.KING, Suit.SPADES);
         Card card5 = new Card(Rank.FOUR, Suit.CLUBS);
-        FiveCard fiveCard = new FiveCard(new Card[]{card,card2,card3,card4,card5});
-        Assert.assertEquals(false, fiveCard.determineIfItIsTwoPair());
+        FiveCards fiveCards = new FiveCards(new Card[]{card,card2,card3,card4,card5});
+        Assert.assertEquals(false, fiveCards.determineIfItIsTwoPair());
     }
 
     @Test
@@ -71,8 +69,8 @@ public class FiveCardTest {
         Card card3 = new Card(Rank.SEVEN, Suit.DIAMONDS);
         Card card4 = new Card(Rank.KING, Suit.SPADES);
         Card card5 = new Card(Rank.SEVEN, Suit.HEARTS);
-        FiveCard fiveCard = new FiveCard(new Card[]{card,card2,card3,card4,card5});
-        Assert.assertEquals(true, fiveCard.determineIfItIsThreeOfAKind());
+        FiveCards fiveCards = new FiveCards(new Card[]{card,card2,card3,card4,card5});
+        Assert.assertEquals(true, fiveCards.determineIfItIsThreeOfAKind());
     }
 
     @Test
@@ -82,8 +80,8 @@ public class FiveCardTest {
         Card card3 = new Card(Rank.SEVEN, Suit.DIAMONDS);
         Card card4 = new Card(Rank.KING, Suit.SPADES);
         Card card5 = new Card(Rank.SEVEN, Suit.HEARTS);
-        FiveCard fiveCard = new FiveCard(new Card[]{card,card2,card3,card4,card5});
-        Assert.assertEquals(false, fiveCard.determineIfItIsStraight());
+        FiveCards fiveCards = new FiveCards(new Card[]{card,card2,card3,card4,card5});
+        Assert.assertEquals(false, fiveCards.determineIfItIsStraight());
     }
 
     @Test
@@ -93,8 +91,8 @@ public class FiveCardTest {
         Card card3 = new Card(Rank.NINE, Suit.DIAMONDS);
         Card card4 = new Card(Rank.TEN, Suit.SPADES);
         Card card5 = new Card(Rank.JACK, Suit.HEARTS);
-        FiveCard fiveCard = new FiveCard(new Card[]{card,card2,card3,card4,card5});
-        Assert.assertEquals(true, fiveCard.determineIfItIsStraight());
+        FiveCards fiveCards = new FiveCards(new Card[]{card,card2,card3,card4,card5});
+        Assert.assertEquals(true, fiveCards.determineIfItIsStraight());
     }
 
     @Test
@@ -104,8 +102,8 @@ public class FiveCardTest {
         Card card3 = new Card(Rank.SEVEN, Suit.DIAMONDS);
         Card card4 = new Card(Rank.KING, Suit.SPADES);
         Card card5 = new Card(Rank.SEVEN, Suit.HEARTS);
-        FiveCard fiveCard = new FiveCard(new Card[]{card,card2,card3,card4,card5});
-        Assert.assertEquals(false, fiveCard.determineIfItIsFlush());
+        FiveCards fiveCards = new FiveCards(new Card[]{card,card2,card3,card4,card5});
+        Assert.assertEquals(false, fiveCards.determineIfItIsFlush());
     }
 
     @Test
@@ -115,8 +113,8 @@ public class FiveCardTest {
         Card card3 = new Card(Rank.TWO, Suit.CLUBS);
         Card card4 = new Card(Rank.FOUR, Suit.CLUBS);
         Card card5 = new Card(Rank.KING, Suit.CLUBS);
-        FiveCard fiveCard = new FiveCard(new Card[]{card,card2,card3,card4,card5});
-        Assert.assertEquals(true, fiveCard.determineIfItIsFlush());
+        FiveCards fiveCards = new FiveCards(new Card[]{card,card2,card3,card4,card5});
+        Assert.assertEquals(true, fiveCards.determineIfItIsFlush());
     }
 
     @Test
@@ -126,8 +124,8 @@ public class FiveCardTest {
         Card card3 = new Card(Rank.TWO, Suit.CLUBS);
         Card card4 = new Card(Rank.FOUR, Suit.CLUBS);
         Card card5 = new Card(Rank.KING, Suit.CLUBS);
-        FiveCard fiveCard = new FiveCard(new Card[]{card,card2,card3,card4,card5});
-        Assert.assertEquals(false, fiveCard.determineIfItIsFullHouse());
+        FiveCards fiveCards = new FiveCards(new Card[]{card,card2,card3,card4,card5});
+        Assert.assertEquals(false, fiveCards.determineIfItIsFullHouse());
     }
 
     @Test
@@ -137,8 +135,8 @@ public class FiveCardTest {
         Card card3 = new Card(Rank.SEVEN, Suit.DIAMONDS);
         Card card4 = new Card(Rank.FIVE, Suit.CLUBS);
         Card card5 = new Card(Rank.SEVEN, Suit.HEARTS);
-        FiveCard fiveCard = new FiveCard(new Card[]{card,card2,card3,card4,card5});
-        Assert.assertEquals(true, fiveCard.determineIfItIsFullHouse());
+        FiveCards fiveCards = new FiveCards(new Card[]{card,card2,card3,card4,card5});
+        Assert.assertEquals(true, fiveCards.determineIfItIsFullHouse());
     }
 
     @Test
@@ -148,8 +146,8 @@ public class FiveCardTest {
         Card card3 = new Card(Rank.TWO, Suit.CLUBS);
         Card card4 = new Card(Rank.KING, Suit.SPADES);
         Card card5 = new Card(Rank.FOUR, Suit.CLUBS);
-        FiveCard fiveCard = new FiveCard(new Card[]{card,card2,card3,card4,card5});
-        Assert.assertEquals(false, fiveCard.determineIfItIsFourOfAKind());
+        FiveCards fiveCards = new FiveCards(new Card[]{card,card2,card3,card4,card5});
+        Assert.assertEquals(false, fiveCards.determineIfItIsFourOfAKind());
     }
 
     @Test
@@ -159,8 +157,8 @@ public class FiveCardTest {
         Card card3 = new Card(Rank.NINE, Suit.CLUBS);
         Card card4 = new Card(Rank.SEVEN, Suit.DIAMONDS);
         Card card5 = new Card(Rank.SEVEN, Suit.HEARTS);
-        FiveCard fiveCard = new FiveCard(new Card[]{card,card2,card3,card4,card5});
-        Assert.assertEquals(true, fiveCard.determineIfItIsFourOfAKind());
+        FiveCards fiveCards = new FiveCards(new Card[]{card,card2,card3,card4,card5});
+        Assert.assertEquals(true, fiveCards.determineIfItIsFourOfAKind());
     }
 
     @Test
@@ -170,8 +168,8 @@ public class FiveCardTest {
         Card card3 = new Card(Rank.TWO, Suit.CLUBS);
         Card card4 = new Card(Rank.KING, Suit.SPADES);
         Card card5 = new Card(Rank.FOUR, Suit.CLUBS);
-        FiveCard fiveCard = new FiveCard(new Card[]{card,card2,card3,card4,card5});
-        Assert.assertEquals(false, fiveCard.determineIfItIsStraightFlush());
+        FiveCards fiveCards = new FiveCards(new Card[]{card,card2,card3,card4,card5});
+        Assert.assertEquals(false, fiveCards.determineIfItIsStraightFlush());
     }
 
     @Test
@@ -181,8 +179,8 @@ public class FiveCardTest {
         Card card3 = new Card(Rank.NINE, Suit.CLUBS);
         Card card4 = new Card(Rank.TEN, Suit.CLUBS);
         Card card5 = new Card(Rank.JACK, Suit.CLUBS);
-        FiveCard fiveCard = new FiveCard(new Card[]{card,card2,card3,card4,card5});
-        Assert.assertEquals(true, fiveCard.determineIfItIsStraightFlush());
+        FiveCards fiveCards = new FiveCards(new Card[]{card,card2,card3,card4,card5});
+        Assert.assertEquals(true, fiveCards.determineIfItIsStraightFlush());
     }
 
 
