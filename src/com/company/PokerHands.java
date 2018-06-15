@@ -12,6 +12,5 @@ public class PokerHands {
         Card card5 = new Card(Rank.FOUR, Suit.CLUBS);
 
         FiveCard fiveCard = new FiveCard(new Card[]{card,card2,card3,card4,card5});
-        System.out.println(fiveCard);
     }
 }
