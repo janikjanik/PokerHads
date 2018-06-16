@@ -9,6 +9,6 @@ public class PokerHands {
         Card card4 = new Card(Rank.KING, Suit.SPADES);
         Card card5 = new Card(Rank.FOUR, Suit.CLUBS);
 
-        FiveCards fiveCards = new FiveCards(new Card[]{card,card2,card3,card4,card5});
+        Player player = new Player(new Card[]{card,card2,card3,card4,card5});
     }
 }

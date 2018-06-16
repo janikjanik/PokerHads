@@ -2,14 +2,19 @@ package com.company;
 
 import java.util.Arrays;
 
-public class FiveCards {
+public class Player {
     private RankOfCard rankOfCard;
-    private Card highRank;
-    private static Card[] cards = new Card[5];
-    public FiveCards(Card[] cards) {
+
+    private Card[] cards = new Card[5];
+
+    public Player(Card[] cards) {
         this.cards = cards;
         Arrays.sort(cards);
         rankOfCard = determineRankOfCard();
+    }
+
+    public Card[] getCards() {
+        return cards;
     }
 
 
@@ -83,7 +88,7 @@ public class FiveCards {
         return determineIfItIsFlush() && determineIfItIsStraight();
     }
 
-    
+
     @Override
     public String toString() {
         String retString = "";
@@ -91,5 +96,9 @@ public class FiveCards {
             retString+=card.toString() + "\n";
         }
         return retString;
+    }
+
+    public RankOfCard getRankOfCard() {
+        return rankOfCard;
     }
 }

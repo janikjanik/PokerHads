@@ -18,18 +18,6 @@ public class Card implements Comparable {
     }
 
 
-//    @Override
-//    public int compare(Object o, Object t1) {
-//        Card firstCard = (Card) o;
-//        Card secondCard = (Card) t1;
-//        if(firstCard.rank.compareTo(secondCard.getValue()) > 0)
-//            return 1;
-//        else if(firstCard.rank.compareTo(secondCard.getValue()) == 0)
-//            return 0;
-//        else
-//            return -1;
-//    }
-
     @Override
     public String toString() {
         return "Card{" +
