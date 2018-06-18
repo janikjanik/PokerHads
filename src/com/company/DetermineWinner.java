@@ -55,12 +55,18 @@ public class DetermineWinner {
             rankOfRemainingBlackCard = black.getCards()[0].getRank();
         }
 
-        if(rankOfFourWhiteCards.compareTo(rankOfFourBlackCards) > 0 || rankOfRemainingWhiteCard.compareTo(rankOfFourBlackCards) > 0){
-            return "White wins. - with four of a kind, the rank of four kind is: " +   rankOfFourWhiteCards.name();
-        }else if (rankOfRemainingWhiteCard.compareTo(rankOfFourBlackCards) > 0){
-            return "White wins. - with four of a kind, the rank of four kind is: " +   rankOfFourWhiteCards.name();
+
+        if(rankOfFourWhiteCards.compareTo(rankOfFourBlackCards) > 0 || (rankOfFourWhiteCards.compareTo(rankOfFourBlackCards) == 0 && rankOfRemainingWhiteCard.compareTo(rankOfRemainingBlackCard) > 0)){
+            return "White wins. - with four of a kind, the rank of four kind is: " +   rankOfFourWhiteCards.name() +" with remaining card " + rankOfRemainingWhiteCard.name();
+        }else if (rankOfFourWhiteCards.compareTo(rankOfFourBlackCards) < 0 || rankOfFourWhiteCards.compareTo(rankOfFourBlackCards) == 0 && rankOfRemainingWhiteCard.compareTo(rankOfRemainingBlackCard) < 0){
+            return "Black wins. - with four of a kind, the rank of four kind is: " +   rankOfFourBlackCards.name() +" with remaining card " + rankOfRemainingBlackCard.name();
+        }else{
+            return "Tie.";
         }
 
+    }
 
+    public String determineWinnerWhenBothPlayersHaveFullHouse() {
+        return "";
     }
 }
